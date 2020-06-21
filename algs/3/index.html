@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+	<title>三阶公式集</title>
+	<style>
+		nav{
+			padding-left:15%;
+		}
+		.paddings{
+			padding-left:15%;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<a class="navbar-brand" href="http://cubebai.top">CubeBai</a>
+		<div class="container-fluid">
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDrop" role="button" data-toggle="dropdown" aria-expanded="false">公式</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="#">三阶</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbardown" role="button" data-toggle="dropdown" aria-expanded="false">教程</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="#">VisualCube</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">工具</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="#">VisualCubeGUI</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDn" role="button" data-toggle="dropdown" aria-expanded="false">关于</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="#">关于作者</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div>
+		<h1 class="font-weight-bold text-center">三阶公式集</h1>
+		<div class="container">
+			<a href="#bj"><button class="btn btn-outline-success shadow-lg p-3 mb-5 rounded"><h2>公式标记</h2><img src="images/biao_ji.svg"/></button></a>
+			<a href="#f2l"><button class="btn btn-outline-primary shadow-lg p-3 mb-5 rounded"><h2>f2l</h2><img src="images/f2l.svg"/></button></a>
+			<a href="#oll"><button class="btn btn-outline-danger shadow-lg p-3 mb-5 rounded"><h2>oll</h2><img src="images/oll.svg"/></button></a>
+			<a href="#pll"><button class="btn btn-outline-warning shadow-lg p-3 mb-5 rounded"><h2>pll</h2><img src="images/pll.svg"/></button></a>
+			<a href="#coll"><button class="btn btn-outline-info shadow-lg p-3 mb-5 rounded"><h2>coll</h2><img src="images/coll.svg"/></button></a>
+		</div>
+	</div>
+	<div class="paddings">
+		<a name="bj"><h1>公式标记</h1></a>
+		<table>
+			<tr>
+				<td><img src="images/bj_Rs.svg"/></td>
+				<td class="h3 text-center"><img src="images/bj_R.svg"/><br/>R</td>
+				<td class="h3 text-center"><img src="images/bj_R'.svg"/><br/>R'</td>
+				<td class="h3 text-center"><img src="images/bj_R2.svg"/><br/>R2</td>
+			</tr>
+			<tr>
+				<td><img src="images/bj_Us.svg"/></td>
+				<td class="h3 text-center"><img src="images/bj_U.svg"/><br/>U</td>
+				<td class="h3 text-center"><img src="images/bj_U'.svg"/><br/>U'</td>
+				<td class="h3 text-center"><img src="images/bj_U2.svg"/><br/>U2</td>
+			</tr>
+			<tr>
+				<td><img src="images/bj_Fs.svg"/></td>
+				<td class="h3 text-center"><img src="images/bj_F.svg"/><br/>F</td>
+				<td class="h3 text-center"><img src="images/bj_F'.svg"/><br/>F'</td>
+				<td class="h3 text-center"><img src="images/bj_F2.svg"/><br/>F2</td>
+			</tr>
+			<tr>
+				<td><img src="images/bj_Ls.svg"/></td>
+				<td class="h3 text-center"><img src="images/bj_L.svg"/><br/>L</td>
+				<td class="h3 text-center"><img src="images/bj_L'.svg"/><br/>L'</td>
+				<td class="h3 text-center"><img src="images/bj_L2.svg"/><br/>L2</td>
+			</tr>
+			<tr>
+				<td><img src="images/bj_Ds.svg"/></td>
+				<td class="h3 text-center"><img src="images/bj_D.svg"/><br/>D</td>
+				<td class="h3 text-center"><img src="images/bj_D'.svg"/><br/>D'</td>
+				<td class="h3 text-center"><img src="images/bj_D2.svg"/><br/>D2</td>
+			</tr>
+			<tr>
+				<td><img src="images/bj_Bs.svg"/></td>
+				<td class="h3 text-center"><img src="images/bj_B.svg"/><br/>B</td>
+				<td class="h3 text-center"><img src="images/bj_B'.svg"/><br/>B'</td>
+				<td class="h3 text-center"><img src="images/bj_B2.svg"/><br/>B2</td>
+			</tr>
+			<tr>
+				<td><img src="images/bj_r_s.svg"/></td>
+				<td class="h3 text-center"><img src="images/bj_rr.svg"/><br/>r</td>
+				<td class="h3 text-center"><img src="images/bj_rr'.svg"/><br/>r'</td>
+				<td class="h3 text-center"><img src="images/bj_rr2.svg"/><br/>r2</td>
+			</tr>
+			<tr>
+				<td><img src="images/bj_u_s.svg"/></td>
+				<td class="h3 text-center"><img src="images/bj_uu.svg"/><br/>u</td>
+				<td class="h3 text-center"><img src="images/bj_uu'.svg"/><br/>u'</td>
+				<td class="h3 text-center"><img src="images/bj_uu2.svg"/><br/>u2</td>
+			</tr><tr>
+				<td><img src="images/bj_f_s.svg"/></td>
+				<td class="h3 text-center"><img src="images/bj_ff.svg"/><br/>f</td>
+				<td class="h3 text-center"><img src="images/bj_ff'.svg"/><br/>f'</td>
+				<td class="h3 text-center"><img src="images/bj_ff2.svg"/><br/>f2</td>
+			</tr>
+			<tr>
+				<td><img src="images/bj_l_s.svg"/></td>
+				<td class="h3 text-center"><img src="images/bj_ll.svg"/><br/>l</td>
+				<td class="h3 text-center"><img src="images/bj_ll'.svg"/><br/>l'</td>
+				<td class="h3 text-center"><img src="images/bj_ll2.svg"/><br/>l2</td>
+			</tr>
+			<tr>
+				<td><img src="images/bj_d_s.svg"/></td>
+				<td class="h3 text-center"><img src="images/bj_dd.svg"/><br/>d</td>
+				<td class="h3 text-center"><img src="images/bj_dd'.svg"/><br/>d'</td>
+				<td class="h3 text-center"><img src="images/bj_dd2.svg"/><br/>d2</td>
+			</tr>
+			<tr>
+				<td><img src="images/bj_b_s.svg"/></td>
+				<td class="h3 text-center"><img src="images/bj_bb.svg"/><br/>b</td>
+				<td class="h3 text-center"><img src="images/bj_bb'.svg"/><br/>b'</td>
+				<td class="h3 text-center"><img src="images/bj_bb2.svg"/><br/>b2</td>
+			</tr>
+			<tr>
+				<td><img src="images/bj_Ms.svg"/></td>
+				<td class="h3 text-center"><img src="images/bj_M.svg"/><br/>M</td>
+				<td class="h3 text-center"><img src="images/bj_M'.svg"/><br/>M'</td>
+				<td class="h3 text-center"><img src="images/bj_M2.svg"/><br/>M2</td>
+			</tr>
+			<tr>
+				<td><img src="images/bj_Ss.svg"/></td>
+				<td class="h3 text-center"><img src="images/bj_S.svg"/><br/>S</td>
+				<td class="h3 text-center"><img src="images/bj_S'.svg"/><br/>S'</td>
+				<td class="h3 text-center"><img src="images/bj_S2.svg"/><br/>S2</td>
+			</tr>
+			<tr>
+				<td><img src="images/bj_Es.svg"/></td>
+				<td class="h3 text-center"><img src="images/bj_E.svg"/><br/>E</td>
+				<td class="h3 text-center"><img src="images/bj_E'.svg"/><br/>E'</td>
+				<td class="h3 text-center"><img src="images/bj_E2.svg"/><br/>E2</td>
+			</tr>
+		</table>
+		<a name="f2l"><h1>f2l</h1></a>
+		<p>暂无</p>
+		<a name="oll"><h1>oll</h1></a>
+		<p>暂无</p>
+		<a name="pll"><h1>pll</h1></a>
+		<p>暂无</p>
+		<a name="coll"><h1>coll</h1></a>
+		<p>暂无</p>
+	</div>
+</body>
+</html>

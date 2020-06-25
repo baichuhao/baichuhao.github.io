@@ -1,8 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+		<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 		<!--导入bootstrap-->
@@ -10,308 +13,34 @@
 			nav{
 				padding-left:10%;
 			}
+			div.show{
+				display:"inline";
+			}
+			div.hide{
+				display:"none";
+			}
 		</style>
-		<script>
-			function sch1(){
-				if (document.forms["variable"]["sch_1"].value == "#"){
-					document.getElementById("s_1").removeAttribute("disabled");
-					document.getElementById("s_2").removeAttribute("disabled");
-					document.getElementById("s_3").removeAttribute("disabled");
-					document.getElementById("s_4").removeAttribute("disabled");
-					document.getElementById("s_5").removeAttribute("disabled");
-					document.getElementById("s_6").removeAttribute("disabled");
-					document.forms["variable"]["sch_1"].value="#"
-					document.forms["variable"]["sch_2"].value="#"
-					document.forms["variable"]["sch_3"].value="#"
-					document.forms["variable"]["sch_4"].value="#"
-					document.forms["variable"]["sch_5"].value="#"
-					document.forms["variable"]["sch_6"].value="#"
-				}else{
-					document.getElementById("s_1").setAttribute("disabled","disabled");
-					document.getElementById("s_2").setAttribute("disabled","disabled");
-					document.getElementById("s_3").setAttribute("disabled","disabled");
-					document.getElementById("s_4").setAttribute("disabled","disabled");
-					document.getElementById("s_5").setAttribute("disabled","disabled");
-					document.getElementById("s_6").setAttribute("disabled","disabled");
-					
-				}
-			}
-			function sch2(){
-				if (document.forms["variable"]["sch_2"].value == "#"){
-					document.getElementById("s_1").removeAttribute("disabled");
-					document.getElementById("s_2").removeAttribute("disabled");
-					document.getElementById("s_3").removeAttribute("disabled");
-					document.getElementById("s_4").removeAttribute("disabled");
-					document.getElementById("s_5").removeAttribute("disabled");
-					document.getElementById("s_6").removeAttribute("disabled");
-					document.forms["variable"]["sch_1"].value="#"
-					document.forms["variable"]["sch_2"].value="#"
-					document.forms["variable"]["sch_3"].value="#"
-					document.forms["variable"]["sch_4"].value="#"
-					document.forms["variable"]["sch_5"].value="#"
-					document.forms["variable"]["sch_6"].value="#"
-				}else{
-					document.getElementById("s_1").setAttribute("disabled","disabled");
-					document.getElementById("s_2").setAttribute("disabled","disabled");
-					document.getElementById("s_3").setAttribute("disabled","disabled");
-					document.getElementById("s_4").setAttribute("disabled","disabled");
-					document.getElementById("s_5").setAttribute("disabled","disabled");
-					document.getElementById("s_6").setAttribute("disabled","disabled");
-					
-				}
-			}
-			function sch3(){
-				if (document.forms["variable"]["sch_3"].value == "#"){
-					document.getElementById("s_1").removeAttribute("disabled");
-					document.getElementById("s_2").removeAttribute("disabled");
-					document.getElementById("s_3").removeAttribute("disabled");
-					document.getElementById("s_4").removeAttribute("disabled");
-					document.getElementById("s_5").removeAttribute("disabled");
-					document.getElementById("s_6").removeAttribute("disabled");
-					document.forms["variable"]["sch_1"].value="#"
-					document.forms["variable"]["sch_2"].value="#"
-					document.forms["variable"]["sch_3"].value="#"
-					document.forms["variable"]["sch_4"].value="#"
-					document.forms["variable"]["sch_5"].value="#"
-					document.forms["variable"]["sch_6"].value="#"
-				}else{
-					document.getElementById("s_1").setAttribute("disabled","disabled");
-					document.getElementById("s_2").setAttribute("disabled","disabled");
-					document.getElementById("s_3").setAttribute("disabled","disabled");
-					document.getElementById("s_4").setAttribute("disabled","disabled");
-					document.getElementById("s_5").setAttribute("disabled","disabled");
-					document.getElementById("s_6").setAttribute("disabled","disabled");
-					
-				}
-			}
-			function sch4(){
-				if (document.forms["variable"]["sch_4"].value == "#"){
-					document.getElementById("s_1").removeAttribute("disabled");
-					document.getElementById("s_2").removeAttribute("disabled");
-					document.getElementById("s_3").removeAttribute("disabled");
-					document.getElementById("s_4").removeAttribute("disabled");
-					document.getElementById("s_5").removeAttribute("disabled");
-					document.getElementById("s_6").removeAttribute("disabled");
-					document.forms["variable"]["sch_1"].value="#"
-					document.forms["variable"]["sch_2"].value="#"
-					document.forms["variable"]["sch_3"].value="#"
-					document.forms["variable"]["sch_4"].value="#"
-					document.forms["variable"]["sch_5"].value="#"
-					document.forms["variable"]["sch_6"].value="#"
-				}else{
-					document.getElementById("s_1").setAttribute("disabled","disabled");
-					document.getElementById("s_2").setAttribute("disabled","disabled");
-					document.getElementById("s_3").setAttribute("disabled","disabled");
-					document.getElementById("s_4").setAttribute("disabled","disabled");
-					document.getElementById("s_5").setAttribute("disabled","disabled");
-					document.getElementById("s_6").setAttribute("disabled","disabled");
-					
-				}
-			}
-			function sch5(){
-				if (document.forms["variable"]["sch_5"].value == "#"){
-					document.getElementById("s_1").removeAttribute("disabled");
-					document.getElementById("s_2").removeAttribute("disabled");
-					document.getElementById("s_3").removeAttribute("disabled");
-					document.getElementById("s_4").removeAttribute("disabled");
-					document.getElementById("s_5").removeAttribute("disabled");
-					document.getElementById("s_6").removeAttribute("disabled");
-					document.forms["variable"]["sch_1"].value="#"
-					document.forms["variable"]["sch_2"].value="#"
-					document.forms["variable"]["sch_3"].value="#"
-					document.forms["variable"]["sch_4"].value="#"
-					document.forms["variable"]["sch_5"].value="#"
-					document.forms["variable"]["sch_6"].value="#"
-				}else{
-					document.getElementById("s_1").setAttribute("disabled","disabled");
-					document.getElementById("s_2").setAttribute("disabled","disabled");
-					document.getElementById("s_3").setAttribute("disabled","disabled");
-					document.getElementById("s_4").setAttribute("disabled","disabled");
-					document.getElementById("s_5").setAttribute("disabled","disabled");
-					document.getElementById("s_6").setAttribute("disabled","disabled");
-					
-				}
-			}
-			function sch6(){
-				if (document.forms["variable"]["sch_6"].value == "#"){
-					document.getElementById("s_1").removeAttribute("disabled");
-					document.getElementById("s_2").removeAttribute("disabled");
-					document.getElementById("s_3").removeAttribute("disabled");
-					document.getElementById("s_4").removeAttribute("disabled");
-					document.getElementById("s_5").removeAttribute("disabled");
-					document.getElementById("s_6").removeAttribute("disabled");
-					document.forms["variable"]["sch_1"].value="#"
-					document.forms["variable"]["sch_2"].value="#"
-					document.forms["variable"]["sch_3"].value="#"
-					document.forms["variable"]["sch_4"].value="#"
-					document.forms["variable"]["sch_5"].value="#"
-					document.forms["variable"]["sch_6"].value="#"
-				}else{
-					document.getElementById("s_1").setAttribute("disabled","disabled");
-					document.getElementById("s_2").setAttribute("disabled","disabled");
-					document.getElementById("s_3").setAttribute("disabled","disabled");
-					document.getElementById("s_4").setAttribute("disabled","disabled");
-					document.getElementById("s_5").setAttribute("disabled","disabled");
-					document.getElementById("s_6").setAttribute("disabled","disabled");
-					
-				}
-			}
-			function bgg(){
-				if (document.forms["variable"]["bg"].value == "#"){
-					document.getElementById("bggg").removeAttribute("disabled");
-				}else{
-					document.getElementById("bggg").setAttribute("disabled","disabled");
-					
-				}
-			}
-			function ccc(){
-				if (document.forms["variable"]["cc"].value == "#"){
-					document.getElementById("cccc").removeAttribute("disabled");
-				}else{
-					document.getElementById("cccc").setAttribute("disabled","disabled");
-					
-				}
-			}
-			function acc(){
-				if (document.forms["variable"]["ac"].value == "#"){
-					document.getElementById("ac__").removeAttribute("disabled");
-				}else{
-					document.getElementById("ac__").setAttribute("disabled","disabled");
-				}
-			}
-			function submit_() {
-				var fmt = document.forms["variable"]["fmt"].value;
-				var pzl = document.forms["variable"]["pzl"].value;
-				var size = document.forms["variable"]["size"].value;
-				var view = document.forms["variable"]["view"].value;
-				var stage = document.forms["variable"]["stage"].value;
-				var stage_2 = document.forms["variable"]["stage_2"].value;
-				var r_1 = document.forms["variable"]["r_1"].value;
-				var r_2 = document.forms["variable"]["r_2"].value;
-				var r_3 = document.forms["variable"]["r_3"].value;
-				var r__1 = document.forms["variable"]["r__1"].value;
-				var r__2 = document.forms["variable"]["r__2"].value;
-				var r__3 = document.forms["variable"]["r__3"].value;
-				var _alg_ = document.forms["variable"]["_alg_"].value;
-				var alg_ = document.forms["variable"]["alg_"].value;
-				var fdc = document.forms["variable"]["fdc"].value;
-				var fdc_ = document.forms["variable"]["fdc_"].value;
-				var sch_1 = document.forms["variable"]["sch_1"].value;
-				var sch_2 = document.forms["variable"]["sch_2"].value
-				var sch_3 = document.forms["variable"]["sch_3"].value;
-				var sch_4 = document.forms["variable"]["sch_4"].value;
-				var sch_5 = document.forms["variable"]["sch_5"].value;
-				var sch_6 = document.forms["variable"]["sch_6"].value;
-				var sch__1 = document.forms["variable"]["sch__1"].value;
-				var sch__2 = document.forms["variable"]["sch__2"].value;
-				var sch__3 = document.forms["variable"]["sch__3"].value;
-				var sch__4 = document.forms["variable"]["sch__4"].value;
-				var sch__5 = document.forms["variable"]["sch__5"].value;
-				var sch__6 = document.forms["variable"]["sch__6"].value;
-				var bg = document.forms["variable"]["bg"].value;
-				var bg_ = document.forms["variable"]["bg_"].value;
-				var cc = document.forms["variable"]["cc"].value;
-				var cc_ = document.forms["variable"]["cc_"].value;
-				var co = document.forms["variable"]["co"].value;
-				var fo = document.forms["variable"]["fo"].value;
-				var dist = document.forms["variable"]["dist"].value;
-				var arw = document.forms["variable"]["arw"].value;
-				var ac = document.forms["variable"]["ac"].value;
-				var ac_ = document.forms["variable"]["ac_"].value;
-				var sch___1 = "";
-				var sch___2 = "";
-				var sch___3 = "";
-				var sch___4 = "";
-				var sch___5 = "";
-				var sch___6 = "";
-				var $bg = "";
-				var $cc = "";
-				var $ac = "";
-				if (document.forms["variable"]["sch_1"].value == "#"){
-					var sch___1 = sch__1 + ",";
-				}else{
-					var sch___1 = sch_1;
-				}
-				if (document.forms["variable"]["sch_2"].value == "#"){
-					var sch___2 = sch__2 + ",";
-				}else{
-					var sch___2 = sch_2;
-				}
-				if (document.forms["variable"]["sch_3"].value == "#"){
-					var sch___3 = sch__3 + ",";
-				}else{
-					var sch___3 = sch_3;
-				}
-				if (document.forms["variable"]["sch_4"].value == "#"){
-					var sch___4 = sch__4 + ",";
-				}else{
-					var sch___4 = sch_4;
-				}
-				if (document.forms["variable"]["sch_5"].value == "#"){
-					var sch___5 = sch__5 + ",";
-				}else{
-					var sch___5 = sch_5;
-				}
-				if (document.forms["variable"]["sch_6"].value == "#"){
-					var sch___6 = sch__6;
-				}else{
-					var sch___6 = sch_6;
-				}
-				if (document.forms["variable"]["bg"].value == "#"){
-					var $bg = bg_;
-				}else{
-					var $bg = bg;
-				}
-				if (document.forms["variable"]["cc"].value == "#"){
-					var $cc = cc_;
-				}else{
-					var $cc = cc;
-				}
-				if (document.forms["variable"]["ac"].value == "#"){
-					var $ac = ac_;
-				}else{
-					var $ac = ac;
-				}
-				var x = "http://cube.rider.biz/visualcube.php?fmt="+fmt+"&pzl="+pzl+"&size="+size+"&view="+view+"&stage="+stage+"-"+stage_2+"&r="+r_1+r__1+r_2+r__2+r_3+r__3+"&"+_alg_+"="+alg_+"&"+fdc+"="+fdc_+"&sch="+sch___1+sch___2+sch___3+sch___4+sch___5+sch___6+"&bg="+$bg+"&cc="+$cc+"&co="+co+"&fo="+fo+"&dist="+dist+"&arw="+arw+"&ac="+ac;
-				document.getElementById("image").src=x;
-			}
-		</script>
+		<script src="what.js"></script>
 		<title>VisualCubeGUI</title>
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-		<a class="navbar-brand" href="http://cubebai.top">CubeBai</a>
-		<div class="container-fluid">
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDrop" role="button" data-toggle="dropdown" aria-expanded="false">公式</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item" href="algs/3">三阶</a></li>
-						</ul>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbardown" role="button" data-toggle="dropdown" aria-expanded="false">教程</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item" href="#">VisualCube</a></li>
-						</ul>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">工具</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item" href="visualcubegui">VisualCubeGUI</a></li>
-						</ul>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDn" role="button" data-toggle="dropdown" aria-expanded="false">关于</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item" href="#">关于作者</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+			<a class="navbar-brand" href="http://cubebai.top">CubeBai</a>
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="http://cubebai.top/algs">公式</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="http://cubebai.top/cs">教程</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">工具</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="http://cubebai.top/visualcubegui">Visual Cube GUI</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
 		<div class="text-center" >
 			<h1 id="h1_">VisualCubeGUI</h1>
 			<img id="image" src="http://cube.rider.biz/visualcube.php?fmt=svg"/><br/>
@@ -439,15 +168,41 @@
 					</div><br/>
 					<div class="container">
 						<label>公式</label><br/>
-							<input type="radio" name="_alg_" value="alg" class="form-check-input" checked id="algg"/><label class="form-check-label">  正</label>
-							<input type="radio" name="_alg_" value="case" class="form-check-input" id="algg_"/><label class="form-check-label">  逆</label>
-							<input type="text" class="form-control" name="alg_" id="alggg"/>
+						<input type="radio" name="_alg_" value="alg" class="form-check-input" checked id="algg"/><label class="form-check-label">  正</label>
+						<input type="radio" name="_alg_" value="case" class="form-check-input" id="algg_"/><label class="form-check-label">  逆</label>
+						<input type="text" class="form-control" name="alg_" id="alggg"/>
 					</div><br/>
 					<div class="container">
-						<label>上色</label><br/>
-						<input type="radio" name="fdc" class="form-check-input" value="fd" checked id="fdcc"/><label class="form-check-label">  fd</label>
-						<input type="radio" name="fdc" class="form-check-input" value="fc" id="fdcc"/><label class="form-check-label">  fc</label>
-						<input type="text" class="form-control" name="fdc_" id="fdccc"/>
+						<label>上色</label>
+						<input type="radio" name="fdc" class="form-check-input" value="fd" checked id="fdcc" onchange="fdcs()"/><label class="form-check-label">  fd</label>
+						<input type="radio" name="fdc" class="form-check-input" value="fc" id="fdcc" onchange="fdcs()"/><label class="form-check-label">  fc</label>
+						<input type="text" class="form-control" name="fdc_" id="fdccc"/><hr/>
+						<div id="fcs" class="show">
+							<input type="button" class="btn btn-outline-dark shadow-sm p-3 mb-5 rounded" value="黑色" onclick="fc_n()" id="c_n"/>
+							<input type="button" class="btn btn-outline-secondary shadow-sm p-3 mb-5 rounded" value="灰色" onclick="fc_d()" id="c_d"/>
+							<input type="button" class="btn btn-outline-secondary shadow-sm p-3 mb-5 rounded" value="亮灰色" onclick="fc_l()" id="c_l"/>
+							<input type="button" class="btn btn-outline-secondary shadow-sm p-3 mb-5 rounded" value="银色" onclick="fc_s()" id="c_s"/>
+							<input type="button" class="btn btn-light shadow-sm p-3 mb-5 rounded" value="白色" onclick="fc_w()" id="c_w"/>
+							<input type="button" class="btn btn-outline-warning shadow-sm p-3 mb-5 rounded" value="黄色" onclick="fc_y()" id="c_y"/>
+							<input type="button" class="btn btn-outline-danger shadow-sm p-3 mb-5 rounded" value="红色" onclick="fc_r()" id="c_r"/>
+							<input type="button" class="btn btn-outline-danger shadow-sm p-3 mb-5 rounded" value="橙色" onclick="fc_o()" id="c_o"/>
+							<input type="button" class="btn btn-outline-primary shadow-sm p-3 mb-5 rounded" value="蓝色" onclick="fc_b()" id="c_b"/>
+							<input type="button" class="btn btn-outline-success shadow-sm p-3 mb-5 rounded" value="绿色" onclick="fc_g()" id="c_g"/>
+							<input type="button" class="btn btn-outline-primary shadow-sm p-3 mb-5 rounded" value="紫色" onclick="fc_m()" id="c_m"/>
+							<input type="button" class="btn btn-outline-danger shadow-sm p-3 mb-5 rounded" value="粉色" onclick="fc_p()" id="c_p"/>
+							<input type="button" class="btn btn-outline-dark shadow-sm p-3 mb-5 rounded" value="透明" onclick="fc_t()" id="c_t"/>
+						</div>
+						<div id="fds" class="hide">
+							<input type="button" class="btn btn-outline-dark shadow-sm p-3 mb-5 rounded" value="黑色" onclick="fd_n()" id="d_n"/>
+							<input type="button" class="btn btn-outline-secondary shadow-sm p-3 mb-5 rounded" value="银色" onclick="fd_o()" id="d_o"/>
+							<input type="button" class="btn btn-outline-dark shadow-sm p-3 mb-5 rounded" value="透明" onclick="fd_t()" id="d_t"/>
+							<input type="button" class="btn btn-outline-warning shadow-sm p-3 mb-5 rounded" value="U层颜色" onclick="fd_u()" id="d_u"/>
+							<input type="button" class="btn btn-outline-danger shadow-sm p-3 mb-5 rounded" value="R层颜色" onclick="fd_r()" id="d_r"/>
+							<input type="button" class="btn btn-outline-primary shadow-sm p-3 mb-5 rounded" value="F层颜色" onclick="fd_f()" id="d_f"/>
+							<input type="button" class="btn btn-light shadow-sm p-3 mb-5 rounded" value="D层颜色" onclick="fd_d()" id="d_d"/>
+							<input type="button" class="btn btn-outline-danger shadow-sm p-3 mb-5 rounded" value="L层颜色" onclick="fd_l()" id="d_l"/>
+							<input type="button" class="btn btn-outline-success shadow-sm p-3 mb-5 rounded" value="B层颜色" onclick="fd_b()" id="d_b"/>
+						</div>
 					</div><br/>
 					<div class="container">
 						<label>贴纸</label><br/>
@@ -455,108 +210,114 @@
 							<div class="row">
 								<div class="col-sm">
 									<select name="sch_1" class="form-select" onchange="sch1()">
-										<option value="n" >黑</option>
-										<option value="d" >灰</option>
-										<option value="l" >亮灰</option>
-										<option value="s" >银</option>
-										<option value="w" >白</option>
-										<option value="y" selected>黄</option>
-										<option value="r" >红</option>
-										<option value="o" >橙</option>
-										<option value="b" >蓝</option>
-										<option value="g" >绿</option>
-										<option value="m" >紫</option>
-										<option value="p" >粉</option>
+										<option value="000000" >黑色</option>
+										<option value="404040" >灰色</option>
+										<option value="808080" >亮灰色</option>
+										<option value="BFBFBF" >银色</option>
+										<option value="FFFFFF" >白色</option>
+										<option value="FEFE00" selected>黄色</option>
+										<option value="EE0000" >红色</option>
+										<option value="FFA100" >橙色</option>
+										<option value="0000F2" >蓝色</option>
+										<option value="00D800" >绿色</option>
+										<option value="A83DD9" >紫色</option>
+										<option value="F33D7B" >粉色</option>
+										<option value="t" >透明</option>
 										<option value="#" >#</option>
 									</select>
 									<input type="text" id="s_1" class="form-control" name="sch__1" disabled="disabled"/>
 								</div>
 								<div class="col-sm">
 									<select name="sch_2" class="form-select" onchange="sch2()">
-										<option value="n" >黑</option>
-										<option value="d" >灰</option>
-										<option value="l" >亮灰</option>
-										<option value="s" >银</option>
-										<option value="w" >白</option>
-										<option value="y" >黄</option>
-										<option value="r" selected>红</option>
-										<option value="o" >橙</option>
-										<option value="b" >蓝</option>
-										<option value="g" >绿</option>
-										<option value="m" >紫</option>
-										<option value="p" >粉</option>
+										<option value="000000" >黑色</option>
+										<option value="404040" >灰色</option>
+										<option value="808080" >亮灰色</option>
+										<option value="BFBFBF" >银色</option>
+										<option value="FFFFFF" >白色</option>
+										<option value="FEFE00" >黄色</option>
+										<option value="EE0000" selected>红色</option>
+										<option value="FFA100" >橙色</option>
+										<option value="0000F2" >蓝色</option>
+										<option value="00D800" >绿色</option>
+										<option value="A83DD9" >紫色</option>
+										<option value="F33D7B" >粉色</option>
+										<option value="t" >透明</option>
 										<option value="#" >#</option>
 									</select>
 									<input type="text" id="s_2" class="form-control" name="sch__2" disabled="disabled"/>
 								</div>
 								<div class="col-sm">
 									<select name="sch_3" class="form-select" onchange="sch3()">
-										<option value="n" >黑</option>
-										<option value="d" >灰</option>
-										<option value="l" >亮灰</option>
-										<option value="s" >银</option>
-										<option value="w" >白</option>
-										<option value="y" >黄</option>
-										<option value="r" >红</option>
-										<option value="o" >橙</option>
-										<option value="b" selected>蓝</option>
-										<option value="g" >绿</option>
-										<option value="m" >紫</option>
-										<option value="p" >粉</option>
+										<option value="000000" >黑色</option>
+										<option value="404040" >灰色</option>
+										<option value="808080" >亮灰色</option>
+										<option value="BFBFBF" >银色</option>
+										<option value="FFFFFF" >白色</option>
+										<option value="FEFE00" >黄色</option>
+										<option value="EE0000" >红色</option>
+										<option value="FFA100" >橙色</option>
+										<option value="0000F2" selected>蓝色</option>
+										<option value="00D800" >绿色</option>
+										<option value="A83DD9" >紫色</option>
+										<option value="F33D7B" >粉色</option>
+										<option value="t" >透明</option>
 										<option value="#" >#</option>
 									</select>
 									<input type="text" id="s_3" class="form-control" name="sch__3" disabled="disabled"/>
 								</div>
 								<div class="col-sm">
 									<select name="sch_4" class="form-select" onchange="sch4()">
-										<option value="n" >黑</option>
-										<option value="d" >灰</option>
-										<option value="l" >亮灰</option>
-										<option value="s" >银</option>
-										<option value="w" selected>白</option>
-										<option value="y" >黄</option>
-										<option value="r" >红</option>
-										<option value="o" >橙</option>
-										<option value="b" >蓝</option>
-										<option value="g" >绿</option>
-										<option value="m" >紫</option>
-										<option value="p" >粉</option>
+										<option value="000000" >黑色</option>
+										<option value="404040" >灰色</option>
+										<option value="808080" >亮灰色</option>
+										<option value="BFBFBF" >银色</option>
+										<option value="FFFFFF" selected>白色</option>
+										<option value="FEFE00" >黄色</option>
+										<option value="EE0000" >红色</option>
+										<option value="FFA100" >橙色</option>
+										<option value="0000F2" >蓝色</option>
+										<option value="00D800" >绿色</option>
+										<option value="A83DD9" >紫色</option>
+										<option value="F33D7B" >粉色</option>
+										<option value="t" >透明</option>
 										<option value="#" >#</option>
 									</select>
 									<input type="text" id="s_4" class="form-control" name="sch__4" disabled="disabled"/>
 								</div>
 								<div class="col-sm">
 									<select name="sch_5" class="form-select" onchange="sch5()">
-										<option value="n" >黑</option>
-										<option value="d" >灰</option>
-										<option value="l" >亮灰</option>
-										<option value="s" >银</option>
-										<option value="w" >白</option>
-										<option value="y" >黄</option>
-										<option value="r" >红</option>
-										<option value="o" selected>橙</option>
-										<option value="b" >蓝</option>
-										<option value="g" >绿</option>
-										<option value="m" >紫</option>
-										<option value="p" >粉</option>
+										<option value="000000" >黑色</option>
+										<option value="404040" >灰色</option>
+										<option value="808080" >亮灰色</option>
+										<option value="BFBFBF" >银色</option>
+										<option value="FFFFFF" >白色</option>
+										<option value="FEFE00" >黄色</option>
+										<option value="EE0000" >红色</option>
+										<option value="FFA100" selected>橙色</option>
+										<option value="0000F2" >蓝色</option>
+										<option value="00D800" >绿色</option>
+										<option value="A83DD9" >紫色</option>
+										<option value="F33D7B" >粉色</option>
+										<option value="t" >透明</option>
 										<option value="#" >#</option>
 									</select>
 									<input type="text" id="s_5" class="form-control" name="sch__5" disabled="disabled"/>
 								</div>
 								<div class="col-sm">
 									<select name="sch_6" class="form-select" onchange="sch6()">
-										<option value="n" >黑</option>
-										<option value="d" >灰</option>
-										<option value="l" >亮灰</option>
-										<option value="s" >银</option>
-										<option value="w" >白</option>
-										<option value="y" >黄</option>
-										<option value="r" >红</option>
-										<option value="o" >橙</option>
-										<option value="b" >蓝</option>
-										<option value="g" selected>绿</option>
-										<option value="m" >紫</option>
-										<option value="p" >粉</option>
+										<option value="000000" >黑色</option>
+										<option value="404040" >灰色</option>
+										<option value="808080" >亮灰色</option>
+										<option value="BFBFBF" >银色</option>
+										<option value="FFFFFF" >白色</option>
+										<option value="FEFE00" >黄色</option>
+										<option value="EE0000" >红色</option>
+										<option value="FFA100" >橙色</option>
+										<option value="0000F2" >蓝色</option>
+										<option value="00D800" selected>绿色</option>
+										<option value="A83DD9" >紫色</option>
+										<option value="F33D7B" >粉色</option>
+										<option value="t" >透明</option>
 										<option value="#" >#</option>
 									</select>
 									<input type="text" id="s_6" class="form-control" name="sch__6" disabled="disabled"/>
@@ -566,19 +327,19 @@
 					<div class="container">
 						<label>图片背景</label><br/>
 						<select name="bg" class="form-select" onchange="bgg()">
-							<option value="n" >黑</option>
-							<option value="d" >灰</option>
-							<option value="l" >亮灰</option>
-							<option value="s" >银</option>
-							<option value="w" selected>白</option>
-							<option value="y" >黄</option>
-							<option value="r" >红</option>
-							<option value="o" >橙</option>
-							<option value="b" >蓝</option>
-							<option value="g" >绿</option>
-							<option value="m" >紫</option>
-							<option value="p" >粉</option>
-							<option value="t" >透明</option>
+							<option value="000000" >黑色</option>
+							<option value="404040" >灰色</option>
+							<option value="808080" >亮灰色</option>
+							<option value="BFBFBF" >银色</option>
+							<option value="FFFFFF" >白色</option>
+							<option value="FEFE00" >黄色</option>
+							<option value="EE0000" >红色</option>
+							<option value="FFA100" >橙色</option>
+							<option value="0000F2" >蓝色</option>
+							<option value="00D800" >绿色</option>
+							<option value="A83DD9" >紫色</option>
+							<option value="F33D7B" >粉色</option>
+							<option value="t" selected>透明</option>
 							<option value="#" >#</option>
 						</select>
 						<input type="text" class="form-control" id="bggg" name="bg_" disabled="disabled"/>
@@ -586,18 +347,18 @@
 					<div class="container">
 						<label>魔方底色</label><br/>
 						<select name="cc" class="form-select" onchange="ccc()">
-							<option value="n" selected>黑</option>
-							<option value="d" >灰</option>
-							<option value="l" >亮灰</option>
-							<option value="s" >银</option>
-							<option value="w" >白</option>
-							<option value="y" >黄</option>
-							<option value="r" >红</option>
-							<option value="o" >橙</option>
-							<option value="b" >蓝</option>
-							<option value="g" >绿</option>
-							<option value="m" >紫</option>
-							<option value="p" >粉</option>
+							<option value="000000" selected>黑色</option>
+							<option value="404040" >灰色</option>
+							<option value="808080" >亮灰色</option>
+							<option value="BFBFBF" >银色</option>
+							<option value="FFFFFF" >白色</option>
+							<option value="FEFE00" >黄色</option>
+							<option value="EE0000" >红色</option>
+							<option value="FFA100" >橙色</option>
+							<option value="0000F2" >蓝色</option>
+							<option value="00D800" >绿色</option>
+							<option value="A83DD9" >紫色</option>
+							<option value="F33D7B" >粉色</option>
 							<option value="t" >透明</option>
 							<option value="#" >#</option>
 						</select>
@@ -624,18 +385,18 @@
 					<div class="container">
 						<label>箭头总颜色</label><br/>
 						<select name="ac" class="form-select" onchange="acc()">
-							<option value="n" selected>黑</option>
-							<option value="d" >灰</option>
-							<option value="l" >亮灰</option>
-							<option value="s" >银</option>
-							<option value="w" >白</option>
-							<option value="y" >黄</option>
-							<option value="r" >红</option>
-							<option value="o" >橙</option>
-							<option value="b" >蓝</option>
-							<option value="g" >绿</option>
-							<option value="m" >紫</option>
-							<option value="p" >粉</option>
+							<option value="000000" >黑色</option>
+							<option value="404040" selected>灰色</option>
+							<option value="808080" >亮灰色</option>
+							<option value="BFBFBF" >银色</option>
+							<option value="FFFFFF" >白色</option>
+							<option value="FEFE00" >黄色</option>
+							<option value="EE0000" >红色</option>
+							<option value="FFA100" >橙色</option>
+							<option value="0000F2" >蓝色</option>
+							<option value="00D800" >绿色</option>
+							<option value="A83DD9" >紫色</option>
+							<option value="F33D7B" >粉色</option>
 							<option value="t" >透明</option>
 							<option value="#" >#</option>
 						</select>

@@ -13,12 +13,6 @@
 			nav{
 				padding-left:10%;
 			}
-			div.show{
-				display:"inline";
-			}
-			div.hide{
-				display:"none";
-			}
 		</style>
 		<script src="what.js"></script>
 		<title>VisualCubeGUI</title>
@@ -177,7 +171,7 @@
 						<input type="radio" name="fdc" class="form-check-input" value="fd" checked id="fdcc" onchange="fdcs()"/><label class="form-check-label">  fd</label>
 						<input type="radio" name="fdc" class="form-check-input" value="fc" id="fdcc" onchange="fdcs()"/><label class="form-check-label">  fc</label>
 						<input type="text" class="form-control" name="fdc_" id="fdccc"/><hr/>
-						<div id="fcs" class="show">
+						<div id="fcs" hidden="hidden">
 							<input type="button" class="btn btn-outline-dark shadow-sm p-3 mb-5 rounded" value="黑色" onclick="fc_n()" id="c_n"/>
 							<input type="button" class="btn btn-outline-secondary shadow-sm p-3 mb-5 rounded" value="灰色" onclick="fc_d()" id="c_d"/>
 							<input type="button" class="btn btn-outline-secondary shadow-sm p-3 mb-5 rounded" value="亮灰色" onclick="fc_l()" id="c_l"/>
@@ -192,7 +186,7 @@
 							<input type="button" class="btn btn-outline-danger shadow-sm p-3 mb-5 rounded" value="粉色" onclick="fc_p()" id="c_p"/>
 							<input type="button" class="btn btn-outline-dark shadow-sm p-3 mb-5 rounded" value="透明" onclick="fc_t()" id="c_t"/>
 						</div>
-						<div id="fds" class="hide">
+						<div id="fds">
 							<input type="button" class="btn btn-outline-dark shadow-sm p-3 mb-5 rounded" value="黑色" onclick="fd_n()" id="d_n"/>
 							<input type="button" class="btn btn-outline-secondary shadow-sm p-3 mb-5 rounded" value="银色" onclick="fd_o()" id="d_o"/>
 							<input type="button" class="btn btn-outline-dark shadow-sm p-3 mb-5 rounded" value="透明" onclick="fd_t()" id="d_t"/>

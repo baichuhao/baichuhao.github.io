@@ -67,11 +67,11 @@ function fd_b(){
 }
 function fdcs(){
 	if (document.forms["variable"]["fdc"].value == "fd"){
-		document.getElementById("fcs").style.display="none";
-		document.getElementById("fds").style.display="inline";
+		document.getElementById("fds").removeAttribute("hidden");
+		document.getElementById("fcs").setAttribute("hidden","hidden");
 	}else{
-		document.getElementById("fds").style.display="none";
-		document.getElementById("fcs").style.display="inline";
+		document.getElementById("fcs").removeAttribute("hidden");
+		document.getElementById("fds").setAttribute("hidden","hidden");
 	}
 }
 function sch1(){

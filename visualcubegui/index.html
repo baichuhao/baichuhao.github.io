@@ -37,15 +37,15 @@
 		</nav>
 		<div class="text-center" >
 			<h1 id="h1_">VisualCubeGUI</h1>
-			<img id="image" src="http://cube.rider.biz/visualcube.php?fmt=svg"/><br/>
+			<img id="image" src="http://cube.rider.biz/visualcube.php?fmt=svg"/><br/><br/>
 			<form name="variable" method="POST" role="form">
-				<input type="button" value="提交" class="btn btn-primary" onclick="submit_()"/>
-				<!--标题-->
-				</div>
+			<!--标题-->
+			<button></button>
+		</div>
 				<div>
 					<div class="container">
 						<label>图片格式</label><br/>
-						<select name="fmt" class="form-select" id="fmtt">
+						<select name="fmt" class="form-select" id="fmtt" onchange="submit_()">
 							<option value="png">png</option>
 							<option value="gif">gif</option>
 							<option value="jpg">jpg</option>
@@ -56,7 +56,7 @@
 					</div><br/>
 					<div class="container">
 						<label>魔方阶数</label><br/>
-						<select name="pzl" class="form-select" id="pzll">
+						<select name="pzl" class="form-select" id="pzll" onchange="stage_pzl()">
 							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3" selected>3</option>
@@ -71,11 +71,12 @@
 					</div><br/>
 					<div class="container">
 						<label>图片大小</label><br/>
-						<input type="number" class="form-control" name="size" min="1" max="1024" value="128" id="sizee"/>
+						<input type="number" class="form-control" name="size" min="1" max="1024" value="128" id="sizee" onchange="sizer_t()"/>
+						<input type="range" class="form-range" name="sizer" min="1" max="1024" value="128" id="sizerange" onchange="sizer_r()"/>
 					</div><br/>
 					<div class="container">
 						<label>视图</label><br/>
-						<select name="view" class="form-select" id="vieww">
+						<select name="view" class="form-select" id="vieww" onchange="submit_()">
 							<option value="" selected>无</option>
 							<option value="plan">俯视</option>
 							<option value="trans">透明</option>
@@ -85,36 +86,39 @@
 						<label>魔方遮罩</label><br/>
 						<div class="row">
 							<div class="col-sm-10">
-								<select name="stage" class="form-select" id="stagee">
+								<select name="stage" class="form-select" id="stagee" onchange="submit_()">
 									<option value="" selected>无</option>
-									<option value="fl">fl</option>
-									<option value="f2l">f2l</option>
-									<option value="ll">ll</option>
-									<option value="cll">cll</option>
-									<option value="ell_">ell</option>
-									<option value="oll_">oll</option>
-									<option value="ocll_">coll</option>
-									<option value="oell_">oell</option>
-									<option value="coll_">coll</option>
-									<option value="ocell_">ocell</option>
-									<option value="wv_">wv</option>
-									<option value="vh_">vh</option>
-									<option value="els_">els</option>
-									<option value="cls_">cls</option>
-									<option value="cmll_">cmll</option>
-									<option value="cross_">cross</option>
-									<option value="f2l_3_">f2l_3</option>
-									<option value="f2l_2_">f2l_2</option>
-									<option value="f2l_sm_">f2l_sm</option>
-									<option value="f2l_1_">f2l_1</option>
-									<option value="f2b_">f2b</option>
-									<option value="line_">line</option>
-									<option value="2x2x2_">2x2x2</option>
-									<option value="2x2x3_">2x2x3</option>
+									<option value="fl" id="fl">底层 fl</option>
+									<option value="fl" id="fl2" hidden="hidden">底层 fl</option>
+									<option value="f2l" id="f2l">前两层 f2l</option>
+									<option value="ll" id="ll">顶层 ll</option>
+									<option value="ll" id="ll2" hidden="hidden">顶层 ll</option>
+									<option value="cll" id="cll">顶层角块及顶层中心块 cll</option>
+									<option value="ell" id="ell">层棱块加顶层中心块 ell</option>
+									<option value="oll" id="oll">顶面 oll</option>
+									<option value="oll" id="oll2" hidden="hidden">顶底面 oll</option>
+									<option value="ocll" id="ocll">顶面角块和顶面中心块 ocll</option>
+									<option value="oell" id="oell">顶面棱块和顶面中心块 oell</option>
+									<option value="coll" id="coll">顶面十字及顶面角块 coll</option>
+									<option value="ocell" id="ocell">顶面角块及顶层十字 ocell</option>
+									<option value="wv" id="wv">前两层和顶层 wv</option>
+									<option value="vh" id="vh">前两层和顶面十字 vh</option>
+									<option value="els" id="els">f2l去掉最后一组角块和顶面十字 els</option>
+									<option value="cls" id="cls">前两层和顶层 cls</option>
+									<option value="cmll" id="cmll">左右桥以及顶层角块 cmll</option>
+									<option value="cross" id="cross">底层十字 cross</option>
+									<option value="f2l_3" id="f2l_3">FRD面的一组f2l f2l_3</option>
+									<option value="f2l_2" id="f2l_2">RDB和RDL面的两组f2l f2l_2</option>
+									<option value="f2l_sm" id="f2l_sm">RFD、BLD面的两个f2l f2l_sm</option>
+									<option value="f2l_1" id="f2l_1">除RFD这一组f2l之外所有f2l f2l_1</option>
+									<option value="f2b" id="f2b">显示桥氏左右桥 f2b</option>
+									<option value="line" id="line">line</option>
+									<option value="2x2x2" id="2x2x2">在RFD面显示2x2x2的颜色 2x2x2</option>
+									<option value="2x2x3" id="2x2x3">在RFLD面显示2x2x3的颜色 2x2x3</option>
 								</select>
 							</div>
 							<div class="col-sm-2">
-								<select name="stage_2" class="form-select" id="stagee_2">
+								<select name="stage_2" class="form-select" id="stagee_2" onchange="submit_()">
 									<option value="" selected>-</option>
 									<option value="x" >x</option>
 									<option value="x'" >x'</option>
@@ -134,36 +138,39 @@
 						<div class="container">
 							<div class="row">
 								<div class="col-md">
-									<select name="r_1" class="form-select" id="rr_1">
+									<select name="r_1" class="form-select" id="rr_1" onchange="submit_()">
 										<option value="x" >x</option>
 										<option value="y" selected>y</option>
 										<option value="z" >z</option>
 									</select>
-									<input type="number" class="form-control" name="r__1" min="-999" max="999" value="45" id="rr__1"/>
+									<input type="number" class="form-control" name="r__1" min="-999" max="999" value="45" id="rr__1" onchange="r__1_r()"/>
+									<input type="range" class="form-range" name="r_1r" min="-999" max="999" value="45" id="r_1range" onchange="r_1_r()"/>
 								</div>
 								<div class="col-md">
-									<select name="r_2" class="form-select" id="rr_2">
+									<select name="r_2" class="form-select" id="rr_2" onchange="submit_()">
 										<option value="x" selected>x</option>
 										<option value="y" >y</option>
 										<option value="z" >z</option>
 									</select>
-									<input type="number" class="form-control" name="r__2" min="-999" max="999" value="-34" id="rr__2"/>
+									<input type="number" class="form-control" name="r__2" min="-999" max="999" value="-34" id="rr__2" onchange="r__2_r()"/>
+									<input type="range" class="form-range" name="r_2r" min="-999" max="999" value="45" id="r_2range" onchange="r_2_r()"/>
 								</div>
 								<div class="col-md">
-									<select name="r_3" class="form-select" id="rr_3">
+									<select name="r_3" class="form-select" id="rr_3" onchange="submit_()">
 										<option value="x" >x</option>
 										<option value="y" >y</option>
 										<option value="z" selected>z</option>
 									</select>
-									<input type="number" class="form-control" name="r__3" min="-999" max="999" value="" id="rr__3"/>
+									<input type="number" class="form-control" name="r__3" min="-999" max="999" value="" id="rr__3" onchange="r__3_r()"/>
+									<input type="range" class="form-range" name="r_3r" min="-999" max="999" value="45" id="r_3range" onchange="r_3_r()"/>
 								</div>
 							</div>
 						</div>
 					</div><br/>
 					<div class="container">
 						<label>公式</label><br/>
-						<input type="radio" name="_alg_" value="alg" class="form-check-input" checked id="algg"/><label class="form-check-label">  正</label>
-						<input type="radio" name="_alg_" value="case" class="form-check-input" id="algg_"/><label class="form-check-label">  逆</label>
+						<input type="radio" name="_alg_" value="alg" class="form-check-input" checked id="algg" onchange="submit_()"/><label class="form-check-label">  正</label>
+						<input type="radio" name="_alg_" value="case" class="form-check-input" id="algg_" onchange="submit_()"/><label class="form-check-label">  逆</label>
 						<input type="text" class="form-control" name="alg_" id="alggg"/>
 					</div><br/>
 					<div class="container">
@@ -219,7 +226,7 @@
 										<option value="t" >透明</option>
 										<option value="#" >#</option>
 									</select>
-									<input type="text" id="s_1" class="form-control" name="sch__1" disabled="disabled"/>
+									<input type="text" id="s_1" class="form-control" name="sch__1" disabled="disabled" onchange="submit_()"/>
 								</div>
 								<div class="col-sm">
 									<select name="sch_2" class="form-select" onchange="sch2()">
@@ -238,7 +245,7 @@
 										<option value="t" >透明</option>
 										<option value="#" >#</option>
 									</select>
-									<input type="text" id="s_2" class="form-control" name="sch__2" disabled="disabled"/>
+									<input type="text" id="s_2" class="form-control" name="sch__2" disabled="disabled" onchange="submit_()"/>
 								</div>
 								<div class="col-sm">
 									<select name="sch_3" class="form-select" onchange="sch3()">
@@ -257,7 +264,7 @@
 										<option value="t" >透明</option>
 										<option value="#" >#</option>
 									</select>
-									<input type="text" id="s_3" class="form-control" name="sch__3" disabled="disabled"/>
+									<input type="text" id="s_3" class="form-control" name="sch__3" disabled="disabled" onchange="submit_()"/>
 								</div>
 								<div class="col-sm">
 									<select name="sch_4" class="form-select" onchange="sch4()">
@@ -276,7 +283,7 @@
 										<option value="t" >透明</option>
 										<option value="#" >#</option>
 									</select>
-									<input type="text" id="s_4" class="form-control" name="sch__4" disabled="disabled"/>
+									<input type="text" id="s_4" class="form-control" name="sch__4" disabled="disabled" onchange="submit_()"/>
 								</div>
 								<div class="col-sm">
 									<select name="sch_5" class="form-select" onchange="sch5()">
@@ -295,7 +302,7 @@
 										<option value="t" >透明</option>
 										<option value="#" >#</option>
 									</select>
-									<input type="text" id="s_5" class="form-control" name="sch__5" disabled="disabled"/>
+									<input type="text" id="s_5" class="form-control" name="sch__5" disabled="disabled" onchange="submit_()"/>
 								</div>
 								<div class="col-sm">
 									<select name="sch_6" class="form-select" onchange="sch6()">
@@ -314,7 +321,7 @@
 										<option value="t" >透明</option>
 										<option value="#" >#</option>
 									</select>
-									<input type="text" id="s_6" class="form-control" name="sch__6" disabled="disabled"/>
+									<input type="text" id="s_6" class="form-control" name="sch__6" disabled="disabled" onchange="submit_()"/>
 								</div>
 							</div>
 					</div><br/>
@@ -336,7 +343,7 @@
 							<option value="t" selected>透明</option>
 							<option value="#" >#</option>
 						</select>
-						<input type="text" class="form-control" id="bggg" name="bg_" disabled="disabled"/>
+						<input type="text" class="form-control" id="bggg" name="bg_" disabled="disabled" onchange="submit_()"/>
 					</div><br/>
 					<div class="container">
 						<label>魔方底色</label><br/>
@@ -356,24 +363,27 @@
 							<option value="t" >透明</option>
 							<option value="#" >#</option>
 						</select>
-						<input type="text" class="form-control" id="cccc" name="cc_" disabled="disabled"/>
+						<input type="text" class="form-control" id="cccc" name="cc_" disabled="disabled" onchange="submit_()"/>
 					</div><br/>
 					<div class="container">
 						<label>魔方透明度</label><br/>
-						<input type="number" class="form-control" name="co" min="0" max="100" step="0.1" value="100"/>
+						<input type="number" class="form-control" name="co" min="0" max="100" step="0.1" value="100" id="co__r" onchange="co__r()"/>
+						<input type="range" class="form-range" name="cor" min="0" max="100" step="0.1" value="100" id="corange" onchange="co_r()"/>
 					</div><br/>
 					<div class="container">
 						<label>贴纸透明度</label><br/>
-						<input type="number" class="form-control" name="fo" min="0" max="100" step="0.1" value="100"/>
+						<input type="number" class="form-control" name="fo" min="0" max="100" step="0.1" value="100" id="fo__r" onchange="fo__r()"/>
+						<input type="range" class="form-range" name="forr" min="0" max="100" step="0.1" value="100" id="forange" onchange="fo_r()"/>
 					</div><br/>
 					<div class="container">
 						<label>魔方观测距离</label><br/>
-						<input type="number" class="form-control" name="dist" min="1" max="100" step="0.1" value="5"/>
+						<input type="number" class="form-control" name="dist" min="1" max="100" step="0.1" value="5" id="dist__r" onchange="dist__r()"/>
+						<input type="range" class="form-range" name="distr" min="1" max="100" step="0.1" value="5" id="distrange" onchange="dist_r()"/>
 					</div><br/>
 						<div class="container">
 						<label>箭头</label><br/>
 						<div class="row">
-							<input type="text" name="arw" class="form-control"/>
+							<input type="text" name="arw" class="form-control" onchange="submit_()"/>
 						</div>
 					</div><br/>
 					<div class="container">
@@ -394,7 +404,7 @@
 							<option value="t" >透明</option>
 							<option value="#" >#</option>
 						</select>
-						<input type="text" class="form-control" id="ac__" name="ac_" disabled="disabled"/>
+						<input type="text" class="form-control" id="ac__" name="ac_" disabled="disabled" onchange="submit_()"/>
 					</div><br/>
 				</div>
 			</form> 

@@ -411,4 +411,5 @@ function submit_() {
 	}
 	var x = "http://cube.rider.biz/visualcube.php?fmt="+fmt+"&pzl="+pzl+"&size="+size+"&view="+view+"&stage="+stage+"-"+stage_2+"&r="+r_1+r__1+r_2+r__2+r_3+r__3+"&"+_alg_+"="+alg_+"&"+fdc+"="+fdc_+"&sch="+sch___1+","+sch___2+","+sch___3+","+sch___4+","+sch___5+","+sch___6+"&bg="+$bg+"&cc="+$cc+"&co="+co+"&fo="+fo+"&dist="+dist+"&arw="+arw+"&ac="+ac;
 	document.getElementById("image").src=x;
+	document.getElementById("dw").href=x;
 }
